@@ -1,0 +1,188 @@
+Git Repository
+ - A folder where .git folder resides and this folder is under the 
+ version control.
+
+GitHub Repository 
+ - Online location where code and related files for a project are stored
+   and managed using Git version control.
+ - platform for hosting Git repositories and provides additional features
+   for collaboration, such as issue tracking, pull requests, project management, and more.
+
+
+git init
+ - initializes an empty git repository
+
+git status
+ - info about current state of the git repository
+ - commits made
+ - tracked/untracked files
+
+git checkout -b <branch_name>
+ - creates and switch to a new branch
+
+git checkout <branch_name>
+ - switch to a new branch
+
+git branch
+ - gives info/list of all the branches in git
+
+git add <file_name>
+ - stages the file or changes made to a file you want to commit.
+ - files are tracked at this stage
+
+git restore --staged <file>
+ - unstages changes for the specified file (<file>) that were 
+   previously staged.
+
+git rm --cached <file>
+ - To remove a file from Git staginging area without deleting it from 
+   your local filesystem. 
+git commit -m  <message>
+ - commit changes with a specified commit message.
+
+git restore <file_name>
+- restores the deleted or modified file
+
+git diff
+ - shows the changes that have been made to files in your working
+   directory but haven't been staged yet.
+
+git diff --staged
+ - changes that have been staged but haven't been committed yet.
+
+git reset HEAD^
+ - to undo the last commit
+
+git diff branch1 branch2
+ - difference between two branches
+
+git log
+ - display the commit history in the repository.
+ -  it shows a list of commits in reverse chronological order
+ -  shows commit hashes,author information, timestamps, and commit 
+    messages.
+------------------------------------------------------------
+Branches: for parallel development and experimentation without affecting
+    the main codebase until changes are ready to be merged. 
+ - Master or main: Primary branch of development in a project, such as
+         main, master, or develop.
+    - typically represents the most stable and latest version of the codebase.
+    - must be kept up to date all the time.
+ - Feature: used to develop new features or functionalities.
+          - created off the main branch.
+          - existing only until the feature is complete and 
+            ready to be merged back into the main branch.
+ - Release branch: used to stabilize the codebase, fix bugs, and perform
+      final testing before deploying the release.
+    - created from the main branch when preparing for a new release.
+    - changes to this branch must be cascaded back to master branch.
+
+ - Hotfix Branch: created to quickly address critical issues or bugs in
+    the production code.
+     - changes must be merged back into both the main branch and any active
+       release branches.
+-------------------------------------------------
+
+Commands:
+
+git branch -d branch_name
+ - delete the branch if its changes have been merged into the current
+   branch.
+
+git branch -D branch_name
+ - force deletion
+ - delete a branch regardless of whether its changes have been merged
+   or not.
+
+git clone <repo_path>
+ - to clone the github repo into your local.
+
+git remote -v
+ - used to view the remote repositories associated with your local
+   Git repository along with their URLs
+
+
+git push origin <branch_name>
+ - to push the changes from your local to your Github repo branch.
+
+
+git pull origin <branch_name>
+ - to pull the changes from your github/origin to your local-repo branch.
+
+git remote add origin <remote_repository_url>
+ - to add a new remote repository to your local Git repository. 
+-------------------------------------------------------------------
+
+Interview questions:
+
+What is the purpose of .git ignore files ?
+ - contains unnecessary or sensitive files that Git should ignore.
+ - excludes from being tracked by Git.
+  
+
+what is the staging/index area in git?
+- middle ground between your working dir and the committed history.
+
+what is difference between git pull and git fetch?
+ - "git pull" is essentially a combination of "git fetch" followed
+   by "git merge".
+ - "git fetch" only downloads the changes from the remote repo to your
+    local repo.
+    Does not merge the changes into your current branch 
+
+what is main branch?
+ - in your loacl whenever you create a new git repo, by default branch
+  is "main branch".
+
+From which branch do you usually perform releases?
+ - Release branch
+
+what is the branch that is always up to date?
+ - Main or Master
+
+Difference between "git Merge" and "git Rebase" ?
+ - Merge: integrates changes from source branch into target branch while 
+   preserving the commit history of both branches.
+ - Rebase: rewrites the commit history by moving or reapplying the changes
+   from source branch onto target.
+   maintains a linear history of commits.
+
+Git clone and git fork?
+ - clone is copy of existing repo on the local machine
+ - fork is the copy of repo in user's GitHub account for 
+   collaboration and contribution purposes.
+ 
+Purpose of  .git config?
+- stores config setting for user git installation.
+
+How do you remove a file from git without deleting it locally?
+ - git rm --cached <file>
+
+How do you resolve a conflict in a pull request?
+ - fetch the changes locally 
+ - create a new branch
+ - resolve conflicts
+ - commit changes
+ - push the branch
+ - update the pull request
+
+ How do you revert a commit that has already been pushed to a remore repo?
+  - git revert commit_sha
+
+ How do you sign commits in git?
+  - git commit -s -m <message>
+
+ Git stash?
+  - It's like a "clipboard" for your uncommitted changes.
+  - Git takes all the changes in your working dir and stores them on a stack of stashes.
+  - After stashing your changes, you can work on something else.
+  - retrieve your stashed changes later by using "git stash apply" or
+    "git stash pop".
+
+ Git index?
+  - it is a file that contains info about files to be included in the 
+    next commit.
+  - bridge between working dir and Repo.
+
+How do you handle versioning in git?
+ - by using tags.
