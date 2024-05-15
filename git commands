@@ -22,7 +22,7 @@ git init
  - creates a hidden folder ".git" in the root of a git Repo.
 
 git status
- - info about current state of the git repository
+ - info about current state of the git repository.
  - commits made
  - tracked/untracked files
 
@@ -44,7 +44,7 @@ git restore --staged <file>
    previously staged.
 
 git rm --cached <file>
- - To remove a file from Git staginging area without deleting it from 
+ - To remove a file from Git staging area without deleting it from 
    your local filesystem. 
 git commit -m  <message>
  - commit changes with a specified commit message.
