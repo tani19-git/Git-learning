@@ -1,16 +1,25 @@
 Git Repository
- - A folder where .git folder resides and this folder is under the 
- version control.
+ - A folder where .git folder resides and this folder is under the version control.
 
 GitHub Repository 
- - Online location where code and related files for a project are stored
-   and managed using Git version control.
- - platform for hosting Git repositories and provides additional features
-   for collaboration, such as issue tracking, pull requests, project management, and more.
+ - Online location where code and related files for a project are stored and 
+   managed using Git version control.
+ - platform for hosting Git repositories and provides additional features for collaboration,
+   such as issue tracking, pull requests, project management, and more.
 
+git remote add origin <repository_url>
+ - command to add the URL of the GitHub repository as the remote origin
+ 
+git remote remove <remote-name>           #default name is "origin"
+ - Remove Existing Remote Configuration
+
+git fetch origin
+ -  to fetch branches from the new remote repository to update your
+   local repository with its latest changes
 
 git init
  - initializes an empty git repository
+ - creates a hidden folder ".git" in the root of a git Repo.
 
 git status
  - info about current state of the git repository
@@ -98,8 +107,8 @@ git clone <repo_path>
  - to clone the github repo into your local.
 
 git remote -v
- - used to view the remote repositories associated with your local
-   Git repository along with their URLs
+ - used to view the remote repositories associated with your local Git
+   repository along with their URLs.
 
 
 git push origin <branch_name>
@@ -109,8 +118,11 @@ git push origin <branch_name>
 git pull origin <branch_name>
  - to pull the changes from your github/origin to your local-repo branch.
 
-git remote add origin <remote_repository_url>
+git remote add origin <remote_repository_url>       
  - to add a new remote repository to your local Git repository. 
+
+git remote remove <remote-name>           #default name is "origin,"
+ - To disconnect a remote GitHub repository from your local repository,
 -------------------------------------------------------------------
 
 Interview questions:
@@ -148,7 +160,7 @@ Difference between "git Merge" and "git Rebase" ?
    maintains a linear history of commits.
 
 Git clone and git fork?
- - clone is copy of existing repo on the local machine
+ - clone is copy/downloading of existing remote repo on the local machine
  - fork is the copy of repo in user's GitHub account for 
    collaboration and contribution purposes.
  
