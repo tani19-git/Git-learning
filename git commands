@@ -1,4 +1,4 @@
-Git Repository
+Git Repository     test it
  - A folder where .git folder resides and this folder is under the version control.
 
 GitHub Repository 
@@ -68,6 +68,15 @@ git reset HEAD^
 git diff branch1 branch2
  - difference between two branches
 
+git fetch origin
+git diff main origin/main
+- fetches the latest changes from the remote Repo named "origin" and then compares the local "main" branch with
+   the "main" branch on the remote repo.
+
+git diff <local-branch> origin/<remote-branch>
+- to see the changes without fetching the latest updates from the remote Repo.
+
+
 git log
  - display the commit history in the repository.
  -  it shows a list of commits in reverse chronological order.
@@ -108,11 +117,10 @@ git clone <repo_path>
  - to clone the github repo into your local.
 
 git remote -v
- - used to view the remote repositories associated with your local Git
-   repository along with their URLs.
-
+ - used to view the remote repositories associated with your local Git-Repo along with their URLs.
 
 git push origin <branch_name>
+git push <remote-name> <local-branch>:<remote-branch>       #<remote-name> is usually "origin" by default.
  - to push the changes from your local to your Github repo branch.
 
 
@@ -133,7 +141,7 @@ What is the purpose of .git ignore files ?
  - excludes from being tracked by Git.
   
 
-what is the staging/index area in git?
+What is the staging/index area in git?
 - middle ground between your working dir and the committed history.
 
 what is difference between git pull and git fetch?
@@ -141,7 +149,7 @@ what is difference between git pull and git fetch?
    by "git merge".
  - "git fetch" only downloads the changes from the remote repo to your
     local repo.
-    Does not merge the changes into your current branch 
+    Does not merge the changes into your current branch.
 
 what is main branch?
  - in your loacl whenever you create a new git repo, by default branch
@@ -154,16 +162,15 @@ what is the branch that is always up to date?
  - Main or Master
 
 Difference between "git Merge" and "git Rebase" ?
- - Merge: integrates changes from source branch into target branch while 
-   preserving the commit history of both branches.
- - Rebase: rewrites the commit history by moving or reapplying the changes
-   from source branch onto target.
+ - Merge: integrates changes from source branch into target branch while preserving the
+          commit history of both branches.
+ - Rebase: rewrites the commit history by moving or re-applying the changes from source 
+           branch onto target.
    maintains a linear history of commits.
 
 Git clone and git fork?
- - clone is copy/downloading of existing remote repo on the local machine
- - fork is the copy of repo in user's GitHub account for 
-   collaboration and contribution purposes.
+ - clone is copy/downloading of existing remote repo onto the local machine.
+ - fork is the copy of repo in user's GitHub account for collaboration and contribution purposes.
  
 Purpose of  .git config?
 - stores config setting for user git installation.
@@ -179,8 +186,8 @@ How do you resolve a conflict in a pull request?
  - push the branch
  - update the pull request
 
- How do you revert a commit that has already been pushed to a remore repo?
-  - git revert commit_sha
+ How do you revert a commit that has already been pushed to a remote repo?
+  - git revert commit_hash
 
  How do you sign commits in git?
   - git commit -s -m <message>
@@ -193,8 +200,7 @@ How do you resolve a conflict in a pull request?
     "git stash pop".
 
  Git index?
-  - it is a file that contains info about files to be included in the 
-    next commit.
+  - it is a file that contains info about files to be included in the next commit.
   - bridge between working dir and Repo.
 
 How do you handle versioning in git?
