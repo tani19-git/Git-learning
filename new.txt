@@ -1,0 +1,5 @@
+# adding changes here in this file.
+1. git remote -v
+ - used to view the remote repositories associated with your local Git
+   repository along with their URLs.
+   
