@@ -50,46 +50,47 @@ git commit -m  <message>
  - commit changes with a specified commit message.
 
 git restore <file_name>
-- restores the deleted or modified file
+- to restore the specified file to its state in the last commit. 
 
 git diff
- - shows the changes that have been made to files in your working
-   directory but haven't been staged yet.
+ - shows the changes that have been made to files in your working directory but 
+   haven't been staged yet.
 
 git diff --staged
  - changes that have been staged but haven't been committed yet.
 
 git reset HEAD^
- - to undo the last commit
+ - to undo the last commit.
+
+         # HEAD is a reference that represents your current position in the Git repository.
+         - it points to the latest commit on the currently active branch.
 
 git diff branch1 branch2
  - difference between two branches
 
 git log
  - display the commit history in the repository.
- -  it shows a list of commits in reverse chronological order
- -  shows commit hashes,author information, timestamps, and commit 
-    messages.
+ -  it shows a list of commits in reverse chronological order.
+ -  shows commit hashes,author information, timestamps, and commit messages.
 ------------------------------------------------------------
-Branches: for parallel development and experimentation without affecting
-    the main codebase until changes are ready to be merged. 
+Branches: for parallel development and experimentation without affecting the main codebase until
+          changes are ready to be merged. 
  - Master or main: Primary branch of development in a project, such as
          main, master, or develop.
     - typically represents the most stable and latest version of the codebase.
     - must be kept up to date all the time.
  - Feature: used to develop new features or functionalities.
           - created off the main branch.
-          - existing only until the feature is complete and 
-            ready to be merged back into the main branch.
- - Release branch: used to stabilize the codebase, fix bugs, and perform
-      final testing before deploying the release.
+          - existing only until the feature is complete and ready to be
+            merged back into the main branch.
+ - Release branch: used to stabilize the codebase, fix bugs, and perform final testing before
+                   deploying the release.
     - created from the main branch when preparing for a new release.
     - changes to this branch must be cascaded back to master branch.
 
- - Hotfix Branch: created to quickly address critical issues or bugs in
-    the production code.
-     - changes must be merged back into both the main branch and any active
-       release branches.
+ - Hotfix Branch: created to quickly address critical issues or bugs in the production code.
+     - It is created from the main development branch.
+     - changes must be merged back into both the main branch and any active release branches.
 -------------------------------------------------
 
 Commands:
